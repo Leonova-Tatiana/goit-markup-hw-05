@@ -615,6 +615,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 72px 24px 24px 24px;
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
@@ -635,7 +636,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 24px;
+  fill: #2e2f42;
   top: 24px;
   right: 24px;
   background-color: #e7e9fc;
@@ -654,8 +655,10 @@ button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-icon:hover {
@@ -702,16 +705,23 @@ button {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: transparent;
   padding-left: 38px;
+  padding-right: 20px;
 }
 
-.input-info:focus {
+.input-info:focus,
+.input-info:hover {
   border-color: #4d5ae5;
+}
+
+.input-info:focus + .input-info-icon {
+  fill: #4d5ae5;
 }
 
 .input-info-icon {
   position: absolute;
   left: 16px;
   top: 50%;
+  fill: #2e2f42;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -739,6 +749,7 @@ button {
 .radio-btn:checked + .privacy-policy-radio-btn .modal-checkbox {
   background-color: #4d5ae5;
   border-color: #4d5ae5;
+  fill: #f4f4fd;
 }
 
 .modal-comment-area::placeholder {
@@ -767,6 +778,7 @@ button {
 .modal-checkbox {
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -784,6 +796,7 @@ button {
   text-decoration: underline;
   font-size: 12px;
   cursor: pointer;
+  letter-spacing: 0.04em;
 }
 
 .modal-btn-send {
@@ -804,9 +817,11 @@ button {
   height: 56px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0 auto;
+  padding: 0;
   cursor: pointer;
 }
 
-.modal-btn-send:hover {
+.modal-btn-send:hover,
+.modal-btn-send:focus {
   background-color: #404bbf;
 }
